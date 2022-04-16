@@ -2,6 +2,7 @@ var quizContaniner = queryselector("quiz");
 var submitBtn = getByElId("submit");
 var timerEl = document.getElementById("timer"); // Timer that counts down from 5
 var choicesEl = document.getElementById("choices");
+var mainQEl =document.getElementById("mainQuestion")
 
 function timer() {
   var totalTotal = 20;
@@ -20,4 +21,18 @@ function timer() {
   }, 1000);
 }
 
-//create questions
+//create questions and choices
+
+var questions = [{
+    numb
+    mainQuestion: "Who created Javascript",
+    choices:['a: adam', 'b: west', 'c: adriana', 'd:Leich'],
+    answer: 'd:Leich',
+   },
+  {
+    mainQuestion: "Who created Javascript",
+    choices:['a: adam', 'b: west', 'c: adriana', 'd:Leich'],
+    answer: 'a: adam',
+  },];
+
+  //create functions to get your questions
