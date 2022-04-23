@@ -1,38 +1,73 @@
-var quizContaniner = queryselector("quiz");
-var submitBtn = getByElId("submit");
-var timerEl = document.getElementById("timer"); // Timer that counts down from 5
-var choicesEl = document.getElementById("choices");
-var mainQEl =document.getElementById("mainQuestion")
+// variables to select html elements
+// var startBtn = document.querySelector(".start-btn");
+// var quizContainer = document.getElementById("quiz");
 
-function timer() {
-  var totalTotal = 20;
+// create function to start quiz
 
-  //if they choose th right answer continue
-  //if they get the wrong answer deduct 10 seconds
-  var timeInterval = setInterval(function () {
-    // As long as the `timeLeft` is greater than 1
-    if ((choicesEl = wrong)) {
-      // Set the `textContent` of `timerEl` to show the remaining seconds
-      timerEl.timer = totalTime - 2;
-      // Decrement `totalTime` by 1
+// start demo
+var index = 0
+
+function qqiz () {
+  var div = document.createElement('div')
+div.setAttribute('class','.question')
+  div.textContent = myQuestion[index].question
+  // anwA.textContent = myQuestion[index].answers.a
+  
+    if(event.target.textContent === myQuestions[index].correctAnswers) {
+      score ++
     } else {
-      totalTime--;
+      timer --
     }
-  }, 1000);
 }
+btn.addEventListener('click', ()=>{
+answer.innerHTML = ''
+qqiz()
+  index++
+})
 
-//create questions and choices
+// end demo
 
-var questions = [{
-    numb
-    mainQuestion: "Who created Javascript",
-    choices:['a: adam', 'b: west', 'c: adriana', 'd:Leich'],
-    answer: 'd:Leich',
-   },
-  {
-    mainQuestion: "Who created Javascript",
-    choices:['a: adam', 'b: west', 'c: adriana', 'd:Leich'],
-    answer: 'a: adam',
-  },];
 
-  //create functions to get your questions
+
+
+
+function startQuiz() {
+  // quizContainer.setAttribute("class", "activeQuiz");
+  // console.log("CLICKED")
+  document.getElementById("start-btn").addEventListener("click", startQuiz);
+
+  myQuestions.forEach((mainQuestion, multChoices) => {
+    document.createElement('div').textContent = mainQuestion.question
+
+    mainQuestion.answers.a
+
+    // for (letter in mainQuestion.answers) {
+    //   answers.push(
+    //     `<label>
+    //     <input type="radio" name="question${multChoices}" value="${letter}">
+    //     ${letter} 
+    //     ${mainQuestion.answers[letter]}
+    //   </label>`
+    //   );
+    // }
+
+    output.push(
+      `<div class="question"> ${mainQuestion.question} </div>
+    <div class="answers"> ${answers.join("")} </div>`
+    );
+
+    quizContainer.innerHTML = output.join("");
+    
+
+    // variables for js functionality
+    var timeCount = 20;
+
+    setInterval(() => {
+      timeCount--;
+      console.log(timeCount);
+      document.querySelector(".timer_sec").innerHTML = timeCount;
+    }, 1000);
+  });
+
+  console.log("testing for loop");
+}
