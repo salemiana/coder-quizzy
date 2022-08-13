@@ -83,11 +83,11 @@ var questionIndex = 0;
  */
 
 // WHEN I click the start button, timer starts
-var totalTime = 151;
+var totalTime = 50;
 function newQuiz() {
     console.log("Hello");
     questionIndex = 0;
-    totalTime = 150;
+    totalTime = 49;
     timeLeft.textContent = totalTime;
     initialInput.textContent = "";
 
@@ -264,12 +264,15 @@ viewHighScore.addEventListener("click", function(event) {
 });
 
 goBackBtn.addEventListener("click", function() {
+    correctAns = 0;
     startDiv.style.display = "block";
     highScoreSection.style.display = "none";
+
 });
 
 clearHighScoreBtn.addEventListener("click", function(){
     window.localStorage.removeItem("high scores");
+    showHighScores();
     listOfHighScores.innerHTML = "High Scores Cleared!";
     listOfHighScores.setAttribute("style", "font-family: 'Archivo', sans-serif; font-style: italic;")
 });
