@@ -43,6 +43,4 @@ https://salemiana.github.io/coder-quizzy/
 
 # Screenshot!
 
-
-https://user-images.githubusercontent.com/101297588/184505464-2d35f12e-861f-47fc-97d7-0a01236f7786.mp4
-
+![screencapture-127-0-0-1-5501-index-html-2022-10-04-17_21_28](https://user-images.githubusercontent.com/101297588/193948161-d516cc87-4449-48ab-a9f7-78bfd9c9bb5a.png)
